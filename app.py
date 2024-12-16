@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import pydeck as pdk
 from datetime import datetime
-import  pandas as pd 
+import  pandas as pd
 
 # Page Title
 st.title("Risky Predictive Front")
@@ -138,14 +138,3 @@ if st.button("Get Prediction"):
             st.error(f"An error occurred: {e}")
     else:
         st.warning("Please ensure all parameters are filled out correctly.")
-
-st.markdown(
-    """
-    ---
-    ### Notes
-    - Ensure your API URL is correct.
-    - Provide valid latitude and longitude for accurate predictions.
-    - This app leverages the `requests` library to communicate with the API.
-    - Weekend determination is automated based on the selected date.
-    """
-)
